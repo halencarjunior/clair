@@ -95,7 +95,7 @@ This is the recommended method for production deployments.
 $ mkdir $HOME/clair_config
 $ curl -L https://raw.githubusercontent.com/coreos/clair/v1.2.4/config.example.yaml -o $HOME/clair_config/config.yaml
 $ $EDITOR $HOME/clair_config/config.yaml # Add the URI for your postgres database
-$ docker run -d -p 6060-6061:6060-6061 -v $HOME/clair_config:/config quay.io/coreos/clair:v1.2. -config=/config/config.yaml
+$ docker run -d -p 6060-6061:6060-6061 -v $HOME/clair_config:/config quay.io/coreos/clair -config=/config/config.yaml
 ```
 
 ### Source
